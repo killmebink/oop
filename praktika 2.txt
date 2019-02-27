@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	float a, b, y, t;
+	cout << "Enter a ,b\n";
+	cin >> a;
+	cin >> b;
+	if (a > b)
+	{
+		y = a + log(pow(b, 2.0));
+	}
+	if (a <= b)
+	{
+		y = ((a - b) / (a + b))*((a + b) / pow(a, 2.0) - 2 * a*b + pow(b, 2.0));
+	}
+	if (y == b)
+	{
+		t = (2 * y + sqrt(pow(y, 2.0) - a)) / (2 * b - sqrt(pow(a, 2.0) - y));
+	}
+	if (y < b)
+	{
+		t = pow(sin(y), 2.0) + 1 / (tan(a - b));
+	}
+	if (y > b)
+	{
+		t = cbrt(y*sin(a)) + 1 / (sqrt(y*cos(b)));
+	}
+	cout << "t=" << t;
+	cout << ",y=" << y;
+	return 0;
+}
