@@ -1,0 +1,110 @@
+
+//praktika 1.1
+
+#include <iostream>
+
+using namespace std;
+
+ 
+
+int main()
+
+{
+
+string a;
+
+string b;
+
+cout << "Vvedite svoe imya."<<'\n';
+
+cin >> a;
+
+cout << "Vvedite svou familiu."<<'\n';
+
+cin >> b;
+
+cout << "Zdravstvuite, " << a << ' ' << b <<'\n';
+
+return 0;
+
+}
+
+
+
+//praktika 1.2
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+  int select, p, m;
+
+  cout << "Vvedite 2 chisla i nazhmite enter: " << endl;
+
+  cin >> p >> m;
+
+  cout << "Vibirete deistvie i nazhmite enter: " << endl;
+
+  cout << "1 slozhit" << endl;
+
+  cout << "2 vichest" << endl;
+
+  cout << "3 umnozhit" << endl;
+
+  cout << "4 delit" << endl;
+
+  cin >> select;
+
+  switch (select)
+
+  {
+
+    case 1:
+
+      cout << p << " + " << m << " = " << p + m << endl;
+
+      break;
+
+    case 2:
+
+      cout << p << " - " << m << " = " << p - m << endl;
+
+      break;
+
+    case 3:
+
+      cout << p << " * " << m << " = " << p * m << endl;
+
+      break;
+
+    case 4:
+
+    while (m==0)
+
+    {
+
+    cout<<"Oshibka na 0 delit nelzya"<<endl;
+
+    cout<<"Vvedite chislo ne ravnoe nulu:"<<endl;
+
+    cin>>m;
+
+    }
+
+      cout << p << " / " << m << " = "<<p/m <<  endl;
+
+      break;
+
+    default:
+
+      cout << "-" << endl;
+
+      break;
+
+  }
+
+  return 0;
+
+}
